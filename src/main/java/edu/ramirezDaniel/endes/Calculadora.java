@@ -1,17 +1,52 @@
 package edu.ramirezDaniel.endes;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+/**
+ * Clase que implementa operaciones aritméticas básicas.
+ * Incluye suma, resta, multiplicación y división controlada.
+ */
 public class Calculadora {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+    /**
+     * Suma dos números reales.
+     * @param a Primer sumando.
+     * @param b Segundo sumando.
+     * @return La suma de a y b.
+     */
+    public double sumar(double a, double b) {
+        return a + b;
+    }
+
+    /**
+     * Resta dos números reales.
+     * @param a Minuendo.
+     * @param b Sustraendo.
+     * @return La diferencia entre a y b.
+     */
+    public double restar(double a, double b) {
+        return a - b;
+    }
+
+    /**
+     * Multiplica dos números reales.
+     * @param a Primer factor.
+     * @param b Segundo factor.
+     * @return El producto de a y b.
+     */
+    public double multiplicar(double a, double b) {
+        return a * b;
+    }
+
+    /**
+     * Divide dos números reales.
+     * @param a Dividendo.
+     * @param b Divisor. No puede ser cero.
+     * @return El cociente de la división.
+     * @throws IllegalArgumentException Si el divisor es cero.
+     */
+    public double dividir(double a, double b) {
+        if (b == 0) {
+            throw new IllegalArgumentException("La división entre cero no está permitida.");
         }
+        return a / b;
     }
 }
